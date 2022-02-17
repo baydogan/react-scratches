@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>REACT</h1>
+    <div id="banner"></div>
+    <footer>
+      <p>footer</p>
+    </footer>
+  </body>
+</html>
+
+<script type="text/babel">
+  const Banner = () => {
+    const text = "new text";
+    const upperCasetext = "another new text"
+
+    return (
+      <div>
+        <h1>{upperCasetext.toUpperCase()}</h1>
+        <p>{text}</p>
+        <p>it comes from React component</p>
+        <p>Random Number: {Math.random() * 100}</p>
+      </div>
+    );
+  };
+  ReactDOM.render(<Banner />, document.getElementById("banner"));
+</script>
