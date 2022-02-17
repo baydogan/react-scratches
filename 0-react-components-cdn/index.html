@@ -21,7 +21,11 @@
 <script type="text/babel">
   const Banner = () => {
     const text = "new text";
-    const upperCasetext = "another new text"
+    const upperCasetext = "another new text";
+    let number = 1;
+    const handleClick = (e) => {
+      console.log(e);
+    };
 
     return (
       <div>
@@ -29,6 +33,9 @@
         <p>{text}</p>
         <p>it comes from React component</p>
         <p>Random Number: {Math.random() * 100}</p>
+        <p>{number}</p>
+        <button onClick={handleClick}>Click me</button>
+        <button handleClick={(e) => console.log(e)} >Inline Function</button>
       </div>
     );
   };
