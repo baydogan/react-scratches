@@ -10,6 +10,8 @@ function App() {
     { title: "Third Text", id: 3 },
   ]);
 
+  
+
   const handleClick = () => {
     setName("changed");
   };
@@ -41,7 +43,7 @@ function App() {
         list.map((list, index) => (
           <div key={list.id}>
             <h2>
-              {index} - {list.title}
+              {list.id} - {list.title}
             </h2>
             <button onClick={() => clickButton(list.id)}>Delete text</button>
           </div>
