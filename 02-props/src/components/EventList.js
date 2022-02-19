@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 
-export function EventList() {
-  const [events, setevents] = useState([
-    {
-      title: "This is a event",
-      id: 1,
-    },
-    {
-      title: "This is an another event",
-      id: 2,
-    },
-    {
-      title: "This is a completely different event",
-      id: 3,
-    },
-  ]);
+export function EventList({ events, setevents }) {
+  // const [events, setevents] = useState([
+  //   {
+  //     title: "This is a event",
+  //     id: 1,
+  //   },
+  //   {
+  //     title: "This is an another event",
+  //     id: 2,
+  //   },
+  //   {
+  //     title: "This is a completely different event",
+  //     id: 3,
+  //   },
+  // ]);
 
   const deleteEvent = (id) => {
     setevents(
@@ -33,7 +33,7 @@ export function EventList() {
               {events.id} - {events.title}
             </h3>
             <button onClick={() => deleteEvent(events.id)}>Delete this event</button>
-          </ React.Fragment>
+          </React.Fragment>
         ))}
       </div>
     </div>
